@@ -17,8 +17,10 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
 
         <h1 class=" font-bold text-4xl">Greenden</h1>
 
+
+
         <!-- menu icon (hero icons) -->
-        <svg class="w-6 h-6 md:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        <svg id="menuicon" class="w-6 h-6 md:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -36,11 +38,28 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
             </li>
         </ul>
     </nav>
+     <!-- side navbar -->
+     <section id="sidenav" class="bg-green-200 fixed z-20 top-0 transition-all duration-1000"  style="width: 50%; height: 100vh; right: -50%;">
+        <div class="text-right p-5">
+            <h3 id="closenav" class="inline cursor-pointer">X</h3>
+        </div>
+        <ul class="flex flex-col items-center  text-gray-500 gap-10">
+            <li>
+                <a class="hover:underline hover:text-black" href="./index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./product.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </section>
     <!-- Product items -->
      <section class="text-center">
         <h1 class="text-3xl font-bold">Our Products</h1>
-        <input type="text" placeholder="Search for a product..." class="p-5 border border-black mt-5" style="width: 80%;height: 40px;">
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
+        <input id="search" type="text" placeholder="Search for a product..." class="p-5 border border-black mt-5" style="width: 80%;height: 40px;">
+        <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5">
             <div>
                 <img class="inline hover:shadow-xl transform hover:-translate-y-2" src="./images/pot1.jpg"
                     alt="pot image">
@@ -92,6 +111,8 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
         </div>
         
      </section>
+
+       
      <!-- Footer section -->
       <!-- Footer -->
     <section class="bg-green-200 mt-5 p-10">
@@ -102,4 +123,6 @@ https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css
 
         </div>
     </section>
+    <script src="product.js"></script>
+    </body>
 
